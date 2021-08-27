@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 export default async function handler(req, res) {
     if(req.method ==='POST'){
         console.log(req.method);
-        const browser = await puppeteer.launch({  headless: true,  ignoreHTTPSErrors: true, executablePath: './node_modules/puppeteer/.local-chromium/linux-901912' });            
+        const browser = await puppeteer.launch({  headless: true,  ignoreHTTPSErrors: true, executablePath: './node_modules/puppeteer/.local-chromium/linux-901912/chrome.exe' });            
         const page = await browser.newPage();
         let url = req.body.data;
 
